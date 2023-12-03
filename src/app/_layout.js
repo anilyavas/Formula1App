@@ -1,4 +1,4 @@
-import { Stack } from 'expo-router';
+import { Stack, Tabs } from 'expo-router';
 import { useFonts } from 'expo-font';
 import { ActivityIndicator } from 'react-native';
 
