@@ -19,7 +19,9 @@ export default function RaceLayout() {
           tabBarActiveTintColor: 'white',
           tabBarIndicatorStyle: { backgroundColor: 'white', height: 5 },
         }}
-      />
+      >
+        <TopTabs.Screen name="index" options={{ title: 'Details' }} />
+      </TopTabs>
     </>
   );
 }
