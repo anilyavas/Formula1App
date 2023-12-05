@@ -1,10 +1,14 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { FlatList } from 'react-native';
+import raceRankingResponse from '../../../../assets/data/race-rankings.json';
+import RankingListItem from '../../../components/RankingListItem';
 
-export default function QualifyingResults() {
+const raceRankings = raceRankingResponse.data.raceRankings.response;
+export default function QualifyingScreen() {
   return (
-    <View>
-      <Text>QualifyingResults</Text>
-    </View>
+    <FlatList
+      data={raceRankings}
+      renderItem={({ item }) => <RankingListItem item={item} />}
+    />
   );
 }
