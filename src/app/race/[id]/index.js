@@ -1,10 +1,13 @@
+import { useLocalSearchParams } from 'expo-router';
 import React from 'react';
 import { View, Text } from 'react-native';
 
 export default function RaceRankings() {
+  const { id } = useLocalSearchParams();
+
   return (
     <View>
-      <Text>RaceRankings</Text>
+      <Text>RaceDetails {id}</Text>
     </View>
   );
 }

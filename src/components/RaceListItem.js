@@ -8,7 +8,7 @@ const races = racesResponse.data.races.response;
 
 export default function RaceListItem({ item, round }) {
   return (
-    <Link href={'/race'} asChild>
+    <Link href={'/race/123'} asChild>
       <Pressable style={styles.itemContainer}>
         <View style={styles.datesContainer}>
           <Text style={styles.date}>
