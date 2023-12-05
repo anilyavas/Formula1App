@@ -1,6 +1,7 @@
 import { Stack, Tabs } from 'expo-router';
 import { useFonts } from 'expo-font';
 import { ActivityIndicator } from 'react-native';
+import { Colors } from '../Constants/Colors';
 
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
@@ -13,5 +14,15 @@ export default function RootLayout() {
   if (!fontsLoaded) {
     return <ActivityIndicator />;
   }
-  return <Stack />;
+  return (
+    <Stack
+      screenOptions={{
+        headerStyle: { backgroundColor: Colors.primary },
+        headerTitleStyle: { color: 'white', fontFamily: 'F1-Bold' },
+        headerTintColor: 'white',
+      }}
+    >
+      <Stack.Screen name="index" options={{ title: 'Racing' }} />
+    </Stack>
+  );
 }
